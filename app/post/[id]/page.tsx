@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getPost } from "../../../components/get-post";
+import getPost from "../../../components/get-post";
 import { API_URL } from "../../constants";
 
 interface IParams {
