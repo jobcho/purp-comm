@@ -1,4 +1,4 @@
-import { getPost } from "./get-post";
+import getPost from "./get-post";
 
 interface IParams {
   params: { id: string };
