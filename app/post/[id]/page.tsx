@@ -6,13 +6,6 @@ interface IParams {
   params: { id: string };
 }
 
-export async function generateMetadata({ params: { id } }: IParams) {
-  const post = await getPost(id);
-  return {
-    title: post.title,
-  };
-}
-
 export default async function PostDetail({ params: { id } }: IParams) {
   const post = await getPost(id);
   return (
