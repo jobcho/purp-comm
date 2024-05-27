@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { getPost } from "../../../components/get-post";
 import { API_URL } from "../../constants";
 
 interface IParams {
@@ -10,10 +11,6 @@ export async function generateMetadata({ params: { id } }: IParams) {
   return {
     title: post.title,
   };
-}
-export async function getPost(id: string) {
-  const response = await fetch(`${API_URL}/post/${id}`);
-  return response.json();
 }
 
 export default async function PostDetail({ params: { id } }: IParams) {
